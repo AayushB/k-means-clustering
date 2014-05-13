@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		459ED5D1190C3CEA00AD21ED /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 459ED5D0190C3CEA00AD21ED /* main.cpp */; };
 		459ED5D3190C3CEA00AD21ED /* K_Means_Clustering.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 459ED5D2190C3CEA00AD21ED /* K_Means_Clustering.1 */; };
+		45ADF3A81922DAC200D585D7 /* WheatKernel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45ADF3A71922DAC200D585D7 /* WheatKernel.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		459ED5CD190C3CEA00AD21ED /* K-Means-Clustering */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "K-Means-Clustering"; sourceTree = BUILT_PRODUCTS_DIR; };
 		459ED5D0190C3CEA00AD21ED /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		459ED5D2190C3CEA00AD21ED /* K_Means_Clustering.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = K_Means_Clustering.1; sourceTree = "<group>"; };
+		45ADF3A61922DA0700D585D7 /* WheatKernel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WheatKernel.h; sourceTree = "<group>"; };
+		45ADF3A71922DAC200D585D7 /* WheatKernel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WheatKernel.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 			children = (
 				459ED5D0190C3CEA00AD21ED /* main.cpp */,
 				459ED5D2190C3CEA00AD21ED /* K_Means_Clustering.1 */,
+				45ADF3A61922DA0700D585D7 /* WheatKernel.h */,
+				45ADF3A71922DAC200D585D7 /* WheatKernel.cpp */,
 			);
 			path = "K-Means-Clustering";
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45ADF3A81922DAC200D585D7 /* WheatKernel.cpp in Sources */,
 				459ED5D1190C3CEA00AD21ED /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +233,7 @@
 				459ED5D8190C3CEA00AD21ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
