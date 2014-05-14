@@ -64,3 +64,33 @@ double WheatKernel::getPerimeter()
 {
     return perimeter;
 }
+
+
+void WheatKernel:: setArea(double value)
+{
+    area=value;
+}
+void WheatKernel:: setPerimeter(double value)
+{
+    perimeter=value;
+}
+void  WheatKernel:: setCompactness(double value)
+{
+     compactness=value;
+}
+void WheatKernel:: setKernelLength(double value)
+{
+    kernelLength=value;
+}
+void WheatKernel:: setKernelWidth(double value)
+{
+    kernelWidth=value;
+}
+void WheatKernel:: setAsymmetryCoeff(double value)
+{
+    asymmetryCoeff=value;
+}
+void WheatKernel:: setLengthKernelGrove(double value)
+{
+    lengthKernelGrove=value;
+}

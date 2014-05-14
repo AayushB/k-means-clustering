@@ -28,6 +28,14 @@ public:
     double getKernelWidth();
     double getAsymmetryCoeff();
     double getLengthKernelGrove();
+    
+    void setArea(double value);
+    void setPerimeter(double value);
+    void setCompactness(double value);
+    void setKernelLength(double value);
+    void setKernelWidth(double value);
+    void setAsymmetryCoeff(double value);
+    void setLengthKernelGrove(double value);
 
 private:
     double area;
