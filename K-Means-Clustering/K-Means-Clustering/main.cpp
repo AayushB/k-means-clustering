@@ -1,30 +1,30 @@
-//
-//  main.cpp
-//  K-Means-Clustering
-//
-//  Created by Aayush Bhandari on 4/26/14.
-//  Copyright (c) 2014 Aayush Bhandari. All rights reserved.
-//
+/**
+ * Statement of Purpose:
+ *
+ * Aayush Bhandari
+ * 910186009
+ * aayushb@mail.sfsu.edu
+ * Xcode Version 4.6.2 (4H1003)
+ * May 16th, 2014
+ * Copyright (c) 2014 Aayush Bhandari. All rights reserved.
+ *
+ */
 
 #include <iostream>
 #include <vector>
 #include <fstream>
-#include <math.h>
+#include <cmath>
+#include <cstdlib>
+#include <ctime>
 #include "WheatKernel.h"
+#include "KMeans.h"
 using namespace std;
 
+//**************************************************************
+//                Functions for generating normalized values
+//**************************************************************
 
 
-double eculedianDistance(WheatKernel value1, WheatKernel value2)
-{
-    return sqrt(pow((value1.getArea()-value2.getArea()),2.0)+
-                pow((value1.getPerimeter()-value2.getPerimeter()),2.0)+
-                pow((value1.getCompactness()-value2.getCompactness()),2.0)+
-                pow((value1.getKernelLength()-value2.getKernelLength()),2.0)+
-                pow((value1.getKernelWidth()-value2.getKernelWidth()),2.0)+
-                pow((value1.getAsymmetryCoeff()-value2.getAsymmetryCoeff()),2.0)+
-                pow((value1.getLengthKernelGrove()-value2.getLengthKernelGrove()),2.0));
-}
 
 void normalizeArea(vector<WheatKernel>& objects)
 {
@@ -230,9 +230,17 @@ void normalizeLengthKernelGrove(vector<WheatKernel>& objects)
 }
 
 
+
+//**************************************************************
+//                Loading the data from our file
+//**************************************************************
 void loadObjects(vector<WheatKernel>& value)
 {
-    string filename="/Users/Aayush/Desktop/GitHubFolders/k-means-clustering/K-Means-Clustering/K-Means-Clustering/seeds_dataset.txt";
+    string filename;
+    cout << "Please enter the file address for your seed file: " ;
+    cin >> filename;
+    
+    //string filename="/Users/Aayush/Desktop/GitHubFolders/k-means-clustering/K-Means-Clustering/K-Means-Clustering/seeds_dataset.txt";
     ifstream file;
     file.open(filename.c_str());
     if(file.fail())
@@ -265,14 +273,28 @@ void loadObjects(vector<WheatKernel>& value)
     
 }
 
+
+//**************************************************************
+//                              main
+//**************************************************************
+
 int main()
 {
+    srand(time(NULL));
     vector<WheatKernel> objects;
-    loadObjects(objects);
+    loadObjects(objects); //loading values from the file
+    //normalizing the vectors
     normalizeArea(objects);
-    for (int i=0; i< objects.size(); i++)
-    {
-        cout << objects.at(i).getArea() << endl;
-    }
+    normalizePerimeter(objects);
+    normalizeCompactness(objects);
+    normalizeKernelLength(objects);
+    normalizeKernelWidth(objects);
+    normalizeAsymmetryCoeff(objects);
+    normalizeLengthKernelGrove(objects);
+    
+    //Instantiating kMeans object
+    KMeans kmeans( objects, 3);
+    
+    kmeans.printData(); // printing the data with label at the end
 }
 

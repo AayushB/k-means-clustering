@@ -13,6 +13,7 @@ class WheatKernel
 {
   
 public:
+    //constructors
     WheatKernel();
     WheatKernel( double area,
                 double perimeter,
@@ -21,6 +22,8 @@ public:
                 double kernelWidth,
                 double asymmetryCoeff,
                 double lengthKernelGrove);
+    
+    //Accessors
     double getArea();
     double getPerimeter();
     double getCompactness();
@@ -29,6 +32,8 @@ public:
     double getAsymmetryCoeff();
     double getLengthKernelGrove();
     
+    
+    //Mutators
     void setArea(double value);
     void setPerimeter(double value);
     void setCompactness(double value);

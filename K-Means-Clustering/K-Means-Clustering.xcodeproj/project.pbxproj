@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4594A17E19243086008A2856 /* KMeans.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4594A17D19243086008A2856 /* KMeans.cpp */; };
 		459ED5D1190C3CEA00AD21ED /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 459ED5D0190C3CEA00AD21ED /* main.cpp */; };
 		459ED5D3190C3CEA00AD21ED /* K_Means_Clustering.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 459ED5D2190C3CEA00AD21ED /* K_Means_Clustering.1 */; };
 		45ADF3A81922DAC200D585D7 /* WheatKernel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45ADF3A71922DAC200D585D7 /* WheatKernel.cpp */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4594A17C19242C2E008A2856 /* KMeans.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMeans.h; sourceTree = "<group>"; };
+		4594A17D19243086008A2856 /* KMeans.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KMeans.cpp; sourceTree = "<group>"; };
 		459ED5CD190C3CEA00AD21ED /* K-Means-Clustering */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "K-Means-Clustering"; sourceTree = BUILT_PRODUCTS_DIR; };
 		459ED5D0190C3CEA00AD21ED /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		459ED5D2190C3CEA00AD21ED /* K_Means_Clustering.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = K_Means_Clustering.1; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				459ED5D2190C3CEA00AD21ED /* K_Means_Clustering.1 */,
 				45ADF3A61922DA0700D585D7 /* WheatKernel.h */,
 				45ADF3A71922DAC200D585D7 /* WheatKernel.cpp */,
+				4594A17C19242C2E008A2856 /* KMeans.h */,
+				4594A17D19243086008A2856 /* KMeans.cpp */,
 			);
 			path = "K-Means-Clustering";
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45ADF3A81922DAC200D585D7 /* WheatKernel.cpp in Sources */,
+				4594A17E19243086008A2856 /* KMeans.cpp in Sources */,
 				459ED5D1190C3CEA00AD21ED /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
